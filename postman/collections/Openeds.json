@@ -1,0 +1,31 @@
+{
+	"info": {
+		"_postman_id": "047c692e-7f40-4e94-a9a4-3af33d67a96c",
+		"name": "Openeds",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "13685214-047c692e-7f40-4e94-a9a4-3af33d67a96c"
+	},
+	"item": [
+		{
+			"name": "/",
+			"id": "32857290-9276-472f-9b4d-914709256f70",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
