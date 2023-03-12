@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "5c3b5a37-597b-43a3-8a76-276b1d5f66f5",
+		"name": "Closeds",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "13685214-5c3b5a37-597b-43a3-8a76-276b1d5f66f5"
+	},
+	"item": [
+		{
+			"name": "Backoffice",
+			"item": [
+				{
+					"name": "/",
+					"id": "3b9314cf-cc06-481d-aa63-7ad5cff17073",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/backoffice",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"backoffice"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "0ac5e046-da44-4bdc-9936-e1346e057d02"
+		},
+		{
+			"name": "Erp",
+			"item": [
+				{
+					"name": "/",
+					"id": "277facd4-2e79-4ae9-9156-5e9ce8201556",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/erp",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"erp"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "6657e384-a737-4ed6-b712-889b565ea2f7"
+		}
+	]
+}
