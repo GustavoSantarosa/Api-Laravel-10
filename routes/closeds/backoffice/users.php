@@ -2,10 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 
-route::controller(UserController::class)->group(function () {
-    route::get('/', 'index');
-    route::get('/{id}', 'show');
-    route::post('/', 'store');
-    route::put('/{id}', 'update');
-    route::delete('/{id}', 'destroy');
+Route::controller(UserController::class)->group(function () {
+    //Route::post('/', 'import');
+    Route::resource('', UserController::class)->except([
+        'create',
+        'edit',
+    ])->parameters([
+        '' => 'id',
+    ]);
 });
