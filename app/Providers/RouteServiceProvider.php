@@ -36,21 +36,23 @@ class RouteServiceProvider extends ServiceProvider
         $this->routes(function () {
             Route::namespace($this->namespace)
                 ->middleware('api')
-                ->group(function(){
+                ->group(function () {
                     Route::namespace('openeds')
                         ->group(base_path('routes/openeds.php'));
 
                     Route::namespace('closeds')
-                        ->group(function() {
-                    Route::namespace('backoffice')
-                        ->prefix('backoffice')
-                        ->group(base_path('routes/closeds/backoffice/users.php'));
+                        ->group(function () {
+                            Route::namespace('backoffice')
+                                ->prefix('backoffice')->group(function () {
+                                    Route::prefix('users')
+                                        ->group(base_path('routes/closeds/backoffice/users.php'));
+                                });
 
-                    Route::namespace('erp')
-                        ->prefix('erp')
-                        ->group(base_path('routes/closeds/erp/peoples.php'));
+                            Route::namespace('erp')
+                                ->prefix('erp')
+                                ->group(base_path('routes/closeds/erp/peoples.php'));
+                        });
                 });
-            });
 
             /* Route::middleware('web')
                 ->group(base_path('routes/web.php')); */
