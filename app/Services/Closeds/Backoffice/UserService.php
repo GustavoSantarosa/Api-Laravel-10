@@ -7,4 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserService extends BaseService
 {
+    public function teste(){
+        dd($this->validate(showStockRequest::class));
+    }
+
+
 }
