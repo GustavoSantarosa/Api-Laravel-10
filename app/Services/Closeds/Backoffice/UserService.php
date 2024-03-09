@@ -10,6 +10,4 @@ class UserService extends BaseService
     public function teste(){
         dd($this->validate(showStockRequest::class));
     }
-
-
 }

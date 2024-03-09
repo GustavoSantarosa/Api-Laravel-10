@@ -10,9 +10,12 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Auth\Access\AuthorizationException;
 use App\Models\Closeds\Backoffice\User;
+use GustavoSantarosa\ValidateTrait\ValidateTrait;
 
 class BaseService
 {
+    use ValidateTrait;
+
     protected ?Model $model;
 
     public function index(): Collection
@@ -52,43 +55,5 @@ class BaseService
         $this->model = $value instanceof Model ? $value : new $value();
 
         return $this;
-    }
-
-    public function validate(object | string $requestClass = null, bool $toArray = false): array | object
-    {
-        if(!$requestClass) {
-            $requestClass = $this->defineClassBindRequest();
-        }
-
-        $request = app($requestClass)->validated();
-
-        return $toArray ? (array) $request : (object) $request;
-    }
-
-    private function defineClassBindRequest(): string
-    {
-        $action = Request()->route()->getActionMethod();
-
-        $requestPrefixes = ["App", "HTTP", "Requests"];
-
-        foreach(explode("\\", static::class) as $prefix) {
-
-            if($prefix !== "App" && $prefix !== "Services" && $prefix !== class_basename(static::class)) {
-                $requestPrefixes[] = $prefix;
-            }
-
-        }
-
-        $requestPrefixes[] = Str::Replace("Service", "", class_basename(static::class));
-        $requestPrefixes[] = Str::ucfirst(Str::camel($action)) . "Request";
-
-
-        $class = implode("\\", $requestPrefixes);
-
-        if(!class_exists($class)) {
-            throw new Exception("The Request file $class does not exists.");
-        }
-
-        return $class;
     }
 }
