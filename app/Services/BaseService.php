@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Auth\Access\AuthorizationException;
+use App\Models\Closeds\Backoffice\User;
 
 class BaseService
 {
@@ -26,7 +27,7 @@ class BaseService
 
     public function store(): Model
     {
-        return $this->model::create($this->validate());
+        return $this->model::create($this->validate(toArray: true));
     }
 
     public function update(int $id): Model
@@ -53,23 +54,15 @@ class BaseService
         return $this;
     }
 
-    public function validate(object | string $requestClass = null, int $currentId = null): array
+    public function validate(object | string $requestClass = null, bool $toArray = false): array | object
     {
         if(!$requestClass) {
             $requestClass = $this->defineClassBindRequest();
         }
 
-        if(!$currentId) {
-            $currentId = request()->isMethod('put') ? request()->route()->id : null;
-        }
+        $request = app($requestClass)->validated();
 
-        $requestClass = is_object($requestClass) ? $requestClass : new $requestClass();
-
-        if(!$requestClass->authorize()){
-            throw new AuthorizationException(code: Response::HTTP_UNAUTHORIZED);
-        }
-
-        return Validator::validate(request()->all(), $requestClass->rules($currentId), $requestClass->messages());
+        return $toArray ? (array) $request : (object) $request;
     }
 
     private function defineClassBindRequest(): string
