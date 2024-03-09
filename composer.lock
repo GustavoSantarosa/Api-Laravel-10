@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "53ca88f14bb4e59cd255e8eb33193fce",
+    "content-hash": "3a960efcb6ba15c6eb9d7b314a8aa580",
     "packages": [
         {
             "name": "brick/math",
@@ -633,6 +633,58 @@
                 }
             ],
             "time": "2023-11-12T22:16:48+00:00"
+        },
+        {
+            "name": "gustavosantarosa/service-basics-extension",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GustavoSantarosa/Service-Basics-Extension.git",
+                "reference": "b428091ca2ba70093c5a3cc5b69dacf145aebb15"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GustavoSantarosa/Service-Basics-Extension/zipball/b428091ca2ba70093c5a3cc5b69dacf145aebb15",
+                "reference": "b428091ca2ba70093c5a3cc5b69dacf145aebb15",
+                "shasum": ""
+            },
+            "require": {
+                "gustavosantarosa/validate-trait": "^1.0",
+                "laravel/framework": "^10.0",
+                "php": "^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "GustavoSantarosa\\ServiceBasicsExtension\\Provider\\ServiceBasicsExtensionProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GustavoSantarosa\\ServiceBasicsExtension\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Luis Gustavo Santarosa",
+                    "email": "gustavo-computacao@hotmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Service Basics Extension",
+            "homepage": "http://www.gustavosantarosa.esy.es/",
+            "support": {
+                "email": "gustavo-computacao@hotmail.com",
+                "issues": "https://github.com/GustavoSantarosa/Service-Basics-Extension/issues",
+                "source": "https://github.com/GustavoSantarosa/Service-Basics-Extension/tree/1.1.2"
+            },
+            "time": "2024-03-09T23:01:32+00:00"
         },
         {
             "name": "gustavosantarosa/validate-trait",
