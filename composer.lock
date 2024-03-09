@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "121ea3a2fffe49b3ef9aa4d064b28c19",
+    "content-hash": "53ca88f14bb4e59cd255e8eb33193fce",
     "packages": [
         {
             "name": "brick/math",
@@ -633,6 +633,57 @@
                 }
             ],
             "time": "2023-11-12T22:16:48+00:00"
+        },
+        {
+            "name": "gustavosantarosa/validate-trait",
+            "version": "1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GustavoSantarosa/Validate-Trait.git",
+                "reference": "562c6e669bb938f94da1072c9967380e734cb2f3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GustavoSantarosa/Validate-Trait/zipball/562c6e669bb938f94da1072c9967380e734cb2f3",
+                "reference": "562c6e669bb938f94da1072c9967380e734cb2f3",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^v10",
+                "php": "^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "GustavoSantarosa\\ValidateTrait\\Provider\\ValidateTraitProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GustavoSantarosa\\ValidateTrait\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Luis Gustavo Santarosa",
+                    "email": "gustavo-computacao@hotmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "ValidateTrait for Laravel",
+            "homepage": "http://www.gustavosantarosa.esy.es/",
+            "support": {
+                "email": "gustavo-computacao@hotmail.com",
+                "issues": "https://github.com/GustavoSantarosa/Validate-Trait/issues",
+                "source": "https://github.com/GustavoSantarosa/Validate-Trait/tree/1.0.5"
+            },
+            "time": "2023-11-02T21:50:58+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",

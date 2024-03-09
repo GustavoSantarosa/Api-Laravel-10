@@ -23,7 +23,7 @@ class StoreRequest extends FormRequest
     {
         return [
             'name'      => 'required|string|max:255',
-            'email'     => 'required|string|max:255',
+            'email'     => 'required|string|max:255|unique:App\Models\Closeds\Backoffice\User,email',
             'password'  => 'required|string|max:255',
         ];
     }
