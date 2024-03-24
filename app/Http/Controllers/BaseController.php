@@ -4,17 +4,24 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use GustavoSantarosa\HandlerBasicsExtension\Traits\ApiResponseTrait;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
 class BaseController extends Controller
 {
+    use ApiResponseTrait;
+
     protected $service;
 
     public function index(): JsonResponse
     {
-        return response()->json(
+        /* abort_if(true, 500, "Service not defined in controller!");
+ */
+        return $this->customResponse(
             $this->service
-                ->index()
+            //->disablePagination()
+            ->index(),
         );
     }
 
