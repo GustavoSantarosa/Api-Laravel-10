@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3a960efcb6ba15c6eb9d7b314a8aa580",
+    "content-hash": "8d0210c44d14205446512f3945cf641e",
     "packages": [
         {
             "name": "brick/math",
@@ -635,22 +635,74 @@
             "time": "2023-11-12T22:16:48+00:00"
         },
         {
-            "name": "gustavosantarosa/service-basics-extension",
-            "version": "1.1.2",
+            "name": "gustavosantarosa/perpage-trait",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/GustavoSantarosa/Service-Basics-Extension.git",
-                "reference": "b428091ca2ba70093c5a3cc5b69dacf145aebb15"
+                "url": "https://github.com/GustavoSantarosa/PerPage-Trait.git",
+                "reference": "71e6bcfb35cf135f7fb2b3b7682aa0254a7366dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GustavoSantarosa/Service-Basics-Extension/zipball/b428091ca2ba70093c5a3cc5b69dacf145aebb15",
-                "reference": "b428091ca2ba70093c5a3cc5b69dacf145aebb15",
+                "url": "https://api.github.com/repos/GustavoSantarosa/PerPage-Trait/zipball/71e6bcfb35cf135f7fb2b3b7682aa0254a7366dc",
+                "reference": "71e6bcfb35cf135f7fb2b3b7682aa0254a7366dc",
                 "shasum": ""
             },
             "require": {
+                "illuminate/support": "^v10|^v11",
+                "php": "^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "GustavoSantarosa\\PerPageTrait\\Provider\\PerPageTraitProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GustavoSantarosa\\PerPageTrait\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Luis Gustavo Santarosa",
+                    "email": "gustavo-computacao@hotmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "ValidateTrait for Laravel",
+            "homepage": "http://www.gustavosantarosa.esy.es/",
+            "support": {
+                "email": "gustavo-computacao@hotmail.com",
+                "issues": "https://github.com/GustavoSantarosa/PerPage-Trait/issues",
+                "source": "https://github.com/GustavoSantarosa/PerPage-Trait/tree/1.2.0"
+            },
+            "time": "2024-03-24T18:40:23+00:00"
+        },
+        {
+            "name": "gustavosantarosa/service-basics-extension",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GustavoSantarosa/Service-Basics-Extension.git",
+                "reference": "6b5a6c5fa4f53a01a020cf3d9a04d2f895212ba3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GustavoSantarosa/Service-Basics-Extension/zipball/6b5a6c5fa4f53a01a020cf3d9a04d2f895212ba3",
+                "reference": "6b5a6c5fa4f53a01a020cf3d9a04d2f895212ba3",
+                "shasum": ""
+            },
+            "require": {
+                "gustavosantarosa/perpage-trait": "^1.0",
                 "gustavosantarosa/validate-trait": "^1.0",
-                "laravel/framework": "^10.0",
+                "laravel/framework": "^10.0 | ^11.0",
                 "php": "^8.0"
             },
             "type": "library",
@@ -682,9 +734,9 @@
             "support": {
                 "email": "gustavo-computacao@hotmail.com",
                 "issues": "https://github.com/GustavoSantarosa/Service-Basics-Extension/issues",
-                "source": "https://github.com/GustavoSantarosa/Service-Basics-Extension/tree/1.1.2"
+                "source": "https://github.com/GustavoSantarosa/Service-Basics-Extension/tree/1.2.0"
             },
-            "time": "2024-03-09T23:01:32+00:00"
+            "time": "2024-03-24T18:44:04+00:00"
         },
         {
             "name": "gustavosantarosa/validate-trait",
