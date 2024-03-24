@@ -636,16 +636,16 @@
         },
         {
             "name": "gustavosantarosa/handler-basics-extension",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GustavoSantarosa/Handler-Basics-Extension.git",
-                "reference": "83736aea0f3752db9aaeb5d7800c8cd8c987bd07"
+                "reference": "1b71b9e30ab6a82c9d6556c87cfb0a4eccd1f040"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GustavoSantarosa/Handler-Basics-Extension/zipball/83736aea0f3752db9aaeb5d7800c8cd8c987bd07",
-                "reference": "83736aea0f3752db9aaeb5d7800c8cd8c987bd07",
+                "url": "https://api.github.com/repos/GustavoSantarosa/Handler-Basics-Extension/zipball/1b71b9e30ab6a82c9d6556c87cfb0a4eccd1f040",
+                "reference": "1b71b9e30ab6a82c9d6556c87cfb0a4eccd1f040",
                 "shasum": ""
             },
             "require": {
@@ -682,9 +682,9 @@
             "support": {
                 "email": "gustavo-computacao@hotmail.com",
                 "issues": "https://github.com/GustavoSantarosa/Handler-Basics-Extension/issues",
-                "source": "https://github.com/GustavoSantarosa/Handler-Basics-Extension/tree/1.2.0"
+                "source": "https://github.com/GustavoSantarosa/Handler-Basics-Extension/tree/1.3.0"
             },
-            "time": "2024-03-24T19:45:52+00:00"
+            "time": "2024-03-24T22:17:05+00:00"
         },
         {
             "name": "gustavosantarosa/perpage-trait",

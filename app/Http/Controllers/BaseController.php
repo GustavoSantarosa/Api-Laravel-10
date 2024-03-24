@@ -3,12 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
 use GustavoSantarosa\HandlerBasicsExtension\Traits\ApiResponseTrait;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
-use SebastianBergmann\CodeCoverage\Report\Xml\Report;
 
 class BaseController extends Controller
 {
@@ -18,16 +16,12 @@ class BaseController extends Controller
 
     public function index(): JsonResponse
     {
-        return $this->apiResponse(
-            message: "Método não implementado!",
-            status: Response::HTTP_NOT_IMPLEMENTED
-        );
-
-        return $this->apiResponse(
-            data: $this->service
-                ->disablePagination()
-                ->index(),
-            message: "Listagem de registros",
+        /* abort_if(true, 500, "Service not defined in controller!");
+ */
+        return $this->customResponse(
+            $this->service
+            //->disablePagination()
+            ->index(),
         );
     }
 
