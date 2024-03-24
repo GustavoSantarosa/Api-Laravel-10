@@ -12,7 +12,10 @@ class BaseController extends Controller
 
     public function index(): JsonResponse
     {
-        return response()->json($this->service->index());
+        return response()->json(
+            $this->service
+                ->index()
+        );
     }
 
     public function show(int $id): JsonResponse
